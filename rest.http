@@ -1,0 +1,40 @@
+GET http://localhost:5000
+ Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzEyNjQ4OTIsImV4cCI6MTY3MTI2ODQ5MiwiYXVkIjoiNjM5ZDdhNGYyY2NkZGJjY2ExYTE5MWQzIiwiaXNzIjoiYXV0b21vdGl2ZS5jb20ifQ.E7HegLnKNWEyTHZGiO7N1gA7mZaNxnM0rDXM8qg_cks
+
+
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json 
+
+{
+    "email":"rahulagarwal78@gmail.com",
+    "password":"testing123"
+}
+
+### register Route
+
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "email":"rahulagarwal78@gmail.com",
+    "password":"testing123"
+}
+
+### refresh Route
+
+POST http://localhost:5000/auth/refresh-token
+Content-Type: application/json
+
+{ 
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzA5MzA4NTEsImV4cCI6MTY3MDkzMDg4MSwiYXVkIjoiNjM5ODU2Y2FlMzEyYjQyNGM5MTdiZmQxIiwiaXNzIjoiYXV0b21vdGl2ZS5jb20ifQ.NF3B58tZr-2hDf9uMaufu07xiA1onbiSY9MAZ69nwPo"
+}
+
+### logut Route
+
+DELETE http://localhost:5000/auth/logout
+Content-Type: application/json
+
+{ 
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzA5MjkwODIsImV4cCI6MTY3MDkyOTExMiwiYXVkIjoiNjM5ODU2Y2FlMzEyYjQyNGM5MTdiZmQxIiwiaXNzIjoiYXV0b21vdGl2ZS5jb20ifQ.bkTqnca20gSxKQcX6MhX2TFrZDkl_4wE8CyEF_xA4Kw"
+}
